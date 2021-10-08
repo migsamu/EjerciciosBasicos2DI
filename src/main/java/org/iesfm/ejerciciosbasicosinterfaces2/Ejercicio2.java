@@ -119,21 +119,22 @@ public class Ejercicio2 extends javax.swing.JFrame {
     private void jButtonCompararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCompararActionPerformed
         // TODO add your handling code here:
         try {
-        String num1 = jTextFieldPrimerNumero.getText().replace(",", ".");
-        String num2 = jTextFieldSegundoNumero.getText().replace(",", ".");
-        
-        double n1 = Double.parseDouble(num1);
-        double n2 = Double.parseDouble(num2);
+            String num1 = jTextFieldPrimerNumero.getText().replace(",", ".");
+            String num2 = jTextFieldSegundoNumero.getText().replace(",", ".");
 
-        if (n1 > n2) {
-            jLabelResultado.setText("El numero " + n1 + " es mayor que el numero " + n2);
-        } else {
-            jLabelResultado.setText("El numero " + n2 + " es mayor que el numero " + n1);
-        }    
+            double n1 = Double.parseDouble(num1);
+            double n2 = Double.parseDouble(num2);
+
+            if (n1 > n2) {
+                jLabelResultado.setText("El numero " + n1 + " es mayor que el numero " + n2);
+            } else if (n2 > n1) {
+                jLabelResultado.setText("El numero " + n2 + " es mayor que el numero " + n1);
+            } else {
+                jLabelResultado.setText("Los numero son iguales");
+            }
         } catch (Exception e) {
             jLabelResultado.setText("Ha introducido algun caracter, introduzca numeros por favor");
         }
-        
 
 
     }//GEN-LAST:event_jButtonCompararActionPerformed
